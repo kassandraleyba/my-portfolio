@@ -344,3 +344,171 @@ body {
 .section-card:hover {
   border-left-width: 8px;
 }
+
+/* Fade in sections as page loads */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section-card {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.about-section {
+  animation-delay: 0.1s;
+}
+
+.projects-section {
+  animation-delay: 0.2s;
+}
+
+.contact-section-wrapper {
+  animation-delay: 0.3s;
+}
+
+/* Pulse animation on skill pills */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.skill:hover {
+  animation: pulse 0.6s ease-in-out;
+}
+
+/* Slide in from left on scroll */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.page h1 {
+  animation: slideInLeft 0.6s ease-out;
+}
+
+/* Floating animation on project screenshot */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.project-screenshot:hover {
+  animation: float 2s ease-in-out infinite;
+}
+
+/* Smooth color change on links
+.contact a,
+.bio a,
+.project-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.contact a::after,
+.bio a::after,
+.project-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #D9826C;
+  transition: width 0.3s ease;
+}
+
+.contact a:hover::after,
+.bio a:hover::after,
+.project-link:hover::after {
+  width: 100%;
+} */
+
+/* Interactive click ripples */
+.ripple {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(127, 175, 145, 0.6) 0%, transparent 70%);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  animation: rippleEffect 1s ease-out;
+  z-index: 9999;
+}
+
+@keyframes rippleEffect {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(15);
+    opacity: 0;
+  }
+}
+
+/* Animated background gradient */
+body {
+  background: linear-gradient(135deg, #FAFAF9 0%, #F5F3F0 100%);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Floating shapes in background (optional) */
+.App::before,
+.App::after {
+  content: '';
+  position: fixed;
+  border-radius: 50%;
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.App::before {
+  width: 400px;
+  height: 400px;
+  background: #7FAF91;
+  top: -200px;
+  right: -200px;
+  animation: float 20s ease-in-out infinite;
+}
+
+.App::after {
+  width: 300px;
+  height: 300px;
+  background: #D9826C;
+  bottom: -150px;
+  left: -150px;
+  animation: float 25s ease-in-out infinite reverse;
+}

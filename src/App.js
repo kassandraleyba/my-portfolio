@@ -2,8 +2,36 @@ import React from 'react';
 import './App.css';
 
 function App() {
+  const [clicks, setClicks] = React.useState([]);
+
+  const handleClick = (e) => {
+    const newClick = {
+      id: Date.now(),
+      x: e.clientX,
+      y: e.clientY,
+    };
+    setClicks([...clicks, newClick]);
+    
+    // Remove click after animation completes
+    setTimeout(() => {
+      setClicks(prev => prev.filter(click => click.id !== newClick.id));
+    }, 1000);
+  };
+
   return (
-    <div className="App">
+    <div className="App" onClick={handleClick}>
+      {/* Click ripples */}
+      {clicks.map(click => (
+        <div
+          key={click.id}
+          className="ripple"
+          style={{
+            left: click.x,
+            top: click.y,
+          }}
+        />
+      ))}
+
       <header className="header">
         <div className="header-content">
           <a href="#about" className="logo">KASSANDRA LEYBA</a>
