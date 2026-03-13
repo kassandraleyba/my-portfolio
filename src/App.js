@@ -88,6 +88,7 @@ function App() {
             <span className="skill">CI/CD</span>
             <span className="skill">GitHub Workflow</span>
             <span className="skill">TDD - RSpec/Jest</span>
+            <span className="skill">AI/Automation Tools</span>
           </div>
         </div>
       </section>
