@@ -64,7 +64,7 @@ function App() {
           <h1>About</h1>
           <p className="bio">
             Hi! I'm a software engineer based in Austin, Texas. I love building systems that actually work—backend infrastructure, 
-            automation pipelines, and tools that make life easier for teams and users.
+            automation pipelines and tools that make life easier for teams and users.
           </p>
           <p className="bio">
             When I'm not debugging code or optimizing databases, I'm probably exploring Austin's food, music, and art scene or 
