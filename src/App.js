@@ -5,14 +5,17 @@ function App() {
   const [clicks, setClicks] = React.useState([]);
 
   const handleClick = (e) => {
+    // Disable ripple on small screens
+    if (window.innerWidth < 768) return;
+
     const newClick = {
       id: Date.now(),
       x: e.clientX,
       y: e.clientY,
     };
-    setClicks([...clicks, newClick]);
-    
-    // Remove click after animation completes
+
+    setClicks(prev => [...prev, newClick]);
+
     setTimeout(() => {
       setClicks(prev => prev.filter(click => click.id !== newClick.id));
     }, 1000);

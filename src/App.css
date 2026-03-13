@@ -512,3 +512,101 @@ body {
   left: -150px;
   animation: float 25s ease-in-out infinite reverse;
 }
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* This hides the hash jump */
+:target {
+  scroll-margin-top: 80px;
+}
+
+/* =========================
+   MOBILE STYLES
+   ========================= */
+
+@media (max-width: 768px) {
+
+  /* Header stacks */
+  .header-content {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+
+  .logo {
+    font-size: 1.1rem;
+  }
+
+  /* Nav wraps nicely */
+  .nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .nav a {
+    font-size: 0.95rem;
+  }
+
+  .social-icons {
+    margin-left: 0;
+    padding-left: 0;
+    border-left: none;
+  }
+
+  /* Page spacing smaller */
+  .page {
+    padding: 2.5rem 1.25rem;
+  }
+
+  /* Headings scale down */
+  .page h1 {
+    font-size: 2rem;
+  }
+
+  .page h2 {
+    font-size: 1.4rem;
+  }
+
+  /* Bio text easier to read */
+  .bio {
+    font-size: 1rem;
+  }
+
+  /* Skills wrap tighter */
+  .skills {
+    gap: 0.6rem;
+  }
+
+  .skill {
+    font-size: 0.85rem;
+    padding: 0.45rem 0.8rem;
+  }
+
+  /* Project card spacing */
+  .project {
+    padding: 1.25rem;
+  }
+
+  .project-description {
+    font-size: 0.95rem;
+  }
+
+  .tech-stack {
+    font-size: 0.9rem;
+  }
+
+  /* Screenshot smaller */
+  .project-screenshot {
+    max-height: 220px;
+  }
+
+  /* Section padding smaller */
+  .section-card {
+    padding: 2.5rem 0;
+  }
+
+}
