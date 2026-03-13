@@ -233,3 +233,114 @@ body {
   transform: scale(1.02);
   box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
+
+/* Skills Grid - Side by Side */
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.skill-column h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.skill-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Responsive - Stack on Mobile */
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/* Section Cards - 3 Distinct Sections */
+.section-card {
+  padding: 4rem 0;
+  border-left: 6px solid transparent;
+}
+
+.about-section {
+  background: white;
+  border-left-color: #D9826C;
+}
+
+.projects-section {
+  background: #FAFAF9;
+  border-left-color: #7FAF91;
+}
+
+.contact-section-wrapper {
+  background: white;
+  border-left-color: #8B6FC1;
+}
+
+/* Make sections wider */
+.section-card .page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.bio a {
+  color: #D9826C;
+  text-decoration: none;
+}
+
+.bio a:hover {
+  text-decoration: underline;
+}
+
+/* Smooth transitions on everything */
+* {
+  transition: all 0.3s ease;
+}
+
+/* Header hover effects */
+.logo:hover {
+  transform: translateY(-2px);
+}
+
+.nav a:hover {
+  transform: translateY(-2px);
+}
+
+/* Skill pills hover */
+.skill:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(127, 175, 145, 0.3);
+  background: #6F9B7D;
+}
+
+/* Project card hover */
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+/* Screenshot zoom on hover */
+.project-screenshot:hover {
+  transform: scale(1.03);
+}
+
+/* Link hover effects */
+.contact a:hover,
+.bio a:hover {
+  color: #C46E5B;
+  transform: translateX(3px);
+  display: inline-block;
+}
+
+/* Section card hover */
+.section-card:hover {
+  border-left-width: 8px;
+}
